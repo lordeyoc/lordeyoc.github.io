@@ -26,6 +26,8 @@ function viewImage(id, ig, src, size) {
 				$('#downloadCounter #counter').html(releases[i].assets[0].download_count);
 			}
 		}
+	}).error(function(e) {
+		console.log(e);
 	});
 	
 	$('#panel').css('z-index','99999999');
