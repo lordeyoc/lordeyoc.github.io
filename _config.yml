@@ -1,0 +1,25 @@
+# Site settings
+name: lordeyoc
+title: lordeyoc
+description: ""
+baseurl: ""
+author: berkantkz
+repository: lordeyoc/lordeyoc.github.io
+exclude: ["single.html","portfolio.html","contact.html","about.html","README.txt","stock-pages"]
+
+# Build settings
+markdown: kramdown
+permalinks: pretty
+
+collections:
+    girdi:
+        output: true
+        permalink: girdi/:title/
+
+
+defaults:
+  - scope:
+      path: '_girdi'
+      type: 'girdi'
+    values:
+      layout: 'index'

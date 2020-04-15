@@ -1,0 +1,14 @@
+---
+title: index
+layout: index
+---
+{% for font in site.static_files %}{% if font.path contains 'thumbnails' %}
+{% assign info = font.name | split: '_ay_' %}
+<a class="gallery-item" onclick="viewImage('{{info[1]}}', '{{info[2]}}', '{{font.name}}', '{{info[3]}}')">
+	<img src="thumbnails/{{font.name}}">
+	<span class="overlay">
+		<h2>Click to see larger</h2>
+	</span>
+</a>
+{%endif%}
+{%endfor%}
